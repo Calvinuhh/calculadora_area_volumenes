@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      style="
+        font-family: 'Franklin Gothic Medium';
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      "
+    >
+      Calculadora de Areas y Volumenes
+    </h1>
+
+    <div
+      id="contenedor_principal"
+      style="display: flex; flex-direction: column; margin-top: 50px"
+    >
+      <label
+        style="
+          margin: 0 auto;
+          font-family: 'Franklin Gothic Medium';
+          font-size: 25px;
+          margin-bottom: 50px;
+          text-align: center;
+        "
+        for="opciones"
+        >Elige una de las figuras la cual quieres calcular el perimetro, area y
+        volumen
+      </label>
+      <select
+        style="
+          width: 300px;
+          height: 30px;
+          margin: 0 auto;
+          margin-bottom: 100px;
+          font-family: 'Franklin Gothic Medium';
+          font-size: 18px;
+          text-align: center;
+        "
+        id="opciones"
+        name="opciones"
+      >
+        <option disabled selected>Selecciona una opción</option>
+        <option value="cuadrado">Cuadrado</option>
+        <option value="rectangulo">Rectangulo</option>
+        <option value="triangulo">Triangulo</option>
+      </select>
+
+      <button
+        id="btn"
+        style="
+          margin: 0 auto;
+          margin-bottom: 20px;
+          width: 100px;
+          height: 30px;
+          font-family: 'Franklin Gothic Medium';
+          font-size: 17px;
+        "
+      >
+        Elegir
+      </button>
+    </div>
+
+    <div id="contenedor_valores" style="display: none"></div>
+    <div
+      id="contenedor_resultados"
+      style="display: none; flex-direction: column"
+    ></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
