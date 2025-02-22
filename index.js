@@ -81,19 +81,23 @@ document.querySelector("#btn").addEventListener("click", () => {
         createTitleResult(
           perimetro,
           "Perimetro: ",
-          perimetroCuadrado(baseInput.value, alturaInput.value)
+          perimetroRectangulo(baseInput.value, alturaInput.value)
         );
         const area = document.createElement("h2");
         createTitleResult(
           area,
           "Area: ",
-          areaCuadrado(baseInput.value, alturaInput.value)
+          areaRectangulo(baseInput.value, alturaInput.value)
         );
         const ancho = document.createElement("h2");
         createTitleResult(
           ancho,
           "Volumen: ",
-          volumenCuadrado(baseInput.value, alturaInput.value, anchoInput.value)
+          volumenRectangulo(
+            baseInput.value,
+            alturaInput.value,
+            anchoInput.value
+          )
         );
 
         contenedor_resultados.appendChild(back_btn);
@@ -517,15 +521,15 @@ function createTitleResult(element, text, result) {
   element.textContent = `${text} ${result}`;
 }
 
-function perimetroCuadrado(base, altura) {
+function perimetroRectangulo(base, altura) {
   return base * 2 + altura * 2;
 }
 
-function areaCuadrado(base, altura) {
+function areaRectangulo(base, altura) {
   return base * altura;
 }
 
-function volumenCuadrado(base, altura, ancho) {
+function volumenRectangulo(base, altura, ancho) {
   return base * altura * ancho;
 }
 
